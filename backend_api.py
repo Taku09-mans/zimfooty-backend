@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from google import genai
@@ -13,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configuration
-GEMINI_API_KEY = "AIzaSyDEsfBCeOjylx_rocukJprD6ZYo8Z3XzFg"
+GEMINI_API_KEY = os.environ.get("AIzaSyDEsfBCeOjylx_rocukJprD6ZYo8Z3XzFg")
 CONNECTION_STRING = "postgresql://neondb_owner:npg_mdzpYTK3LAH1@ep-super-bonus-ammuoe7v-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 client = genai.Client(api_key=GEMINI_API_KEY)
 
