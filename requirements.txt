@@ -1,0 +1,7 @@
+Flask
+flask-cors
+google-genai
+psycopg2-binary
+pandas
+scikit-learn
+gunicorn
